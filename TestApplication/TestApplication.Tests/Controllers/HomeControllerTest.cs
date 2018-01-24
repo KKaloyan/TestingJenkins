@@ -56,5 +56,11 @@ namespace TestApplication.Tests.Controllers
         {
             Assert.IsTrue(true);
         }
+
+        [Test]
+        public void AddTest()
+        {
+            Assert.IsFalse(false);
+        }
     }
 }
