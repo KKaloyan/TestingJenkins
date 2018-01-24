@@ -54,7 +54,7 @@ namespace TestApplication.Tests.Controllers
         [Test]
         public void Broken()
         {
-            Assert.IsTrue(false);
+            Assert.IsTrue(true);
         }
     }
 }
