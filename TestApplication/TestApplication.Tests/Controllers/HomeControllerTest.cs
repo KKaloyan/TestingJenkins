@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Web.Mvc;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TestApplication;
 using TestApplication.Controllers;
+using NUnit.Framework;
 
 namespace TestApplication.Tests.Controllers
 {
-    [TestClass]
+    [TestFixture]
     public class HomeControllerTest
     {
-        [TestMethod]
+        [Test]
         public void Index()
         {
             // Arrange
@@ -25,7 +25,7 @@ namespace TestApplication.Tests.Controllers
             Assert.IsNotNull(result);
         }
 
-        [TestMethod]
+        [Test]
         public void About()
         {
             // Arrange
@@ -38,7 +38,7 @@ namespace TestApplication.Tests.Controllers
             Assert.AreEqual("Your application description page.", result.ViewBag.Message);
         }
 
-        [TestMethod]
+        [Test]
         public void Contact()
         {
             // Arrange
@@ -49,6 +49,12 @@ namespace TestApplication.Tests.Controllers
 
             // Assert
             Assert.IsNotNull(result);
+        }
+
+        [Test]
+        public void Broken()
+        {
+            Assert.IsTrue(false);
         }
     }
 }
